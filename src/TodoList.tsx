@@ -2,7 +2,7 @@ import React, {ChangeEvent} from 'react';
 import {FilterValuesType} from "./App";
 import {AddItemForm} from "./AddItemForm";
 import {EditableSpan} from "./EditableSpan";
-import {IconButton} from "@material-ui/core";
+import {Button, IconButton} from "@material-ui/core";
 import DeleteIcon from '@material-ui/icons/Delete';
 
 export type TasksType = {
@@ -91,14 +91,14 @@ const TodoList = (props: TodolistPropsType) => {
                     })}
                 </ul>
                 <div>
-                    <button className={props.filter === 'all' ? "active-filter" : ''} onClick={onAllClickHandler}>All
-                    </button>
-                    <button className={props.filter === 'active' ? "active-filter" : ''}
+                    <Button variant={props.filter === 'all' ? "contained" : 'text'} onClick={onAllClickHandler}>All
+                    </Button>
+                    <Button color={"primary"} variant={props.filter === 'active' ? "contained" : 'text'}
                             onClick={onActiveClickHandler}>Active
-                    </button>
-                    <button className={props.filter === 'completed' ? "active-filter" : ''}
+                    </Button>
+                    <Button color={"secondary"} variant={props.filter === 'completed' ? "contained" : 'text'}
                             onClick={onCompletedClickHandler}>Completed
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>
