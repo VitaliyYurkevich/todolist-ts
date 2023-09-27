@@ -17,3 +17,15 @@ test('user reducer should increment only childrenCount', () => {
     expect(endState.childrenCount).toBe(3)
 
 })
+
+
+test('user reducer should increment name of user', () => {
+    let newName = 'Victor'
+    const startState = {age: 20, childrenCount: 2, name: 'Dimych'}
+    const endState = userReducer(startState,{type: 'RENAME-NAME', newName: newName})
+    // your code here
+    expect(endState.age).toBe(20)
+    expect(endState.childrenCount).toBe(2)
+    expect(endState.name).toBe(newName)
+
+})
