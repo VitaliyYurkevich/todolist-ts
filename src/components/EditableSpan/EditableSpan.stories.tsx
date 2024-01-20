@@ -1,8 +1,8 @@
-import {AddItemForm} from "../AddItemForm";
+import {AddItemForm} from "../AddItemForm/AddItemForm";
 import { action } from '@storybook/addon-actions'
-import {Task} from "../Task";
+import {Task} from "../../features/Todolists/Todolist/Task/Task";
 import React from "react";
-import {EditableSpan} from "../EditableSpan";
+import {EditableSpan} from "./EditableSpan";
 
 
 export default {
